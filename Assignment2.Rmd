@@ -1,0 +1,31 @@
+---
+title: "RMarkdown"
+author: "Sunkyu Kim"
+date: '2021 3 26 '
+output: word_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## 2020 K-League Ranking Table
+
+This table is showing professional soccer league in Korea ranking table in 2020.
+**First column** represent each teams *name*.
+**Second column** represent total *match number* of one season.
+**Third column** represent *winning point* of each team which they get in one season.
+**Fourth column** represent the number of *winning game* in one season.
+**Fifth column** represent the number of *drawing game* in one season.
+**Sixth column** represent the number of *losing game* in one season.
+
+```{r}
+Team<-c("JeonBuk", "UlSan", "PoHang", "SangJu", "DaeGu", "GuangJu")
+Game<-27
+Point<-c(60,57,50,44,38,25)
+Win<-c(19,17,15,13,10,6)
+Draw<-c(3,6,5,5,8,7)
+Lose<-c(5,4,7,9,9,14)
+na1<-data.frame(Team, Game, Point, Win, Draw, Lose)
+na1
+```
